@@ -21,7 +21,7 @@ The even Walsh functions are also labeled as *SAL* and the uneven functions as *
 * `bool wal256(unsigned char n, unsigned char t)`
 
 ## Examples
-1. `WalshFunctionSeries.ino` - This example prints the first 32 Walsh functions in 32 timesteps. The logic 1 is printed as *+* and the  logic 0 as *-*.
+1. `WalshFunctionSeries.ino` - This example prints the first 32 Walsh functions in 32 timesteps. The logic '1' is printed as '*+*' and the  logic '0' as '*-*'.
 
 ```
 ++++++++++++++++++++++++++++++++ WAL(0,T)
