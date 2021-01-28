@@ -21,7 +21,12 @@ The even Walsh functions are also labeled as *SAL* and the uneven functions as *
 * `bool wal256(unsigned char n, unsigned char t)`
 
 ## Examples
-1. `WalshFunctionSeries.ino` - This example prints the first 32 Walsh functions in 32 timesteps. The logic '1' is printed as '*+*' and the  logic '0' as '*-*'.
+1. `WalshFunctionSeries.ino` - This example prints the first 32 Walsh functions in 32 timesteps. The logic '1' is printed as '*+*' and the  logic '0' as '*-*'. See below.
+2. `WaveFormSynthesis1` - This example generates a sinewave  from Walsh functions.
+3. `WaveFormSynthesis2` - This example generates a sawtooth wave from Walsh functions.
+
+Tip: use the Arduino plotter function for example 2 and 3.
+
 
 ```
 ++++++++++++++++++++++++++++++++ WAL(0,T)

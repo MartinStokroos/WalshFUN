@@ -1,12 +1,13 @@
 /*
 * File: walshFun.h
 * Purpose: Walsh functions for Arduino
-* Version: 1.0.1
+* Version: 1.0.2
 * Release date: 28-01-2021
 * Last edit: 28-01-2021
 *
 * Version history:
 * rev. 1.0.1 - fixed some lookup tables.
+* rev. 1.0.2 - tables data type changed to unsigned char to prevent narrowing conversion problems.
 *
 *
 * URL: https://github.com/MartinStokroos/WalshFUN
@@ -37,7 +38,7 @@
 
 
 // Gray-code tables (LSB first).
-const char gray_lut8[] PROGMEM = {
+const unsigned char gray_lut8[] PROGMEM = {
   B000,
   B100,
   B110,
@@ -48,7 +49,7 @@ const char gray_lut8[] PROGMEM = {
   B001
 };
 
-const char gray_lut16[] PROGMEM = {
+const unsigned char gray_lut16[] PROGMEM = {
   B0000,
   B1000,
   B1100,
@@ -67,7 +68,7 @@ const char gray_lut16[] PROGMEM = {
   B0001
 };
 
-const char gray_lut32[] PROGMEM = {
+const unsigned char gray_lut32[] PROGMEM = {
   B00000,
   B10000,
   B11000,
@@ -103,7 +104,7 @@ const char gray_lut32[] PROGMEM = {
 };
 
 
-const char gray_lut64[] PROGMEM = {
+const unsigned char gray_lut64[] PROGMEM = {
   B000000,
   B100000,
   B110000,
@@ -171,7 +172,7 @@ const char gray_lut64[] PROGMEM = {
 };
 
 
-const char gray_lut128[] PROGMEM = {
+const unsigned char gray_lut128[] PROGMEM = {
   B0000000,
   B1000000,
   B1100000,
@@ -303,7 +304,7 @@ const char gray_lut128[] PROGMEM = {
 };
 
 
-const char gray_lut256[] PROGMEM = {
+const unsigned char gray_lut256[] PROGMEM = {
   B00000000,
   B10000000,
   B11000000,
