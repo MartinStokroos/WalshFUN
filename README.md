@@ -1,16 +1,16 @@
 # WalshFUN 
 
 ## Walsh function series generator library for Arduino
-The Walsh functions are the discrete version of the sine-cosine functions. Walsh functions can be used analogus to sine-cosine functions in Fourier analysis or wave synthesis. According to the Walsh function definition, the output of the Walsh functions have only two states viz: +1 and -1.
+The Walsh functions [1] are the discrete version of the sine-cosine functions. Walsh functions can be used analogus to sine-cosine functions in Fourier analysis or wave synthesis. According to the Walsh function definition, the output of the Walsh functions have only two states viz +1 or -1. With this implementation of the Walsh functions  for Arduino, the walsh function output has a logic value of 1 or 0 (boolean).
 
-With this implementation for Arduino, the walsh function output has a logic value of 1 or 0 (boolean). The Walsh function is noted as:
+The Walsh function is noted as:
 
-*WAL(n, t)*
+*WAL(n, t)* ,Where:
 
 *n* is the 'frequency' or wave number
 *t* is the time, usually normalized to the time base *t/T*.
 
-The even Walsh functions are also labeled as *SAL* and the uneven functions as *CAL*.
+The even Walsh functions are sometimes labeled as *SAL* and the uneven functions as *CAL*.
 
 ## Walsh functions in the library
 * `bool wal8(unsigned char n, unsigned char t)`
@@ -96,3 +96,4 @@ Tip: use the Arduino plotter function for example 2 and 3.
 +-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+ CAL(15,T)
 
 ```
+[1]: https://en.wikipedia.org/wiki/Walsh_function
