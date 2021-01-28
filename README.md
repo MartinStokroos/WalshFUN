@@ -5,12 +5,13 @@ The Walsh functions [1] are the discrete version of the sine-cosine functions. W
 
 The Walsh function is noted as:
 
-*WAL(n, t)* ,Where:
+*WAL(n, t)* , Where:
 
-*n* is the 'frequency' or wave number
+*n* is the 'frequency' or wave number,
+
 *t* is the time, usually normalized to the time base *t/T*.
 
-The even Walsh functions are sometimes labeled as *SAL* and the uneven functions as *CAL*.
+The even Walsh functions are sometimes labeled as *CAL* and the odd Walsh functions as *SAL*.
 
 ## Walsh functions in the library
 * `bool wal8(unsigned char n, unsigned char t)`
