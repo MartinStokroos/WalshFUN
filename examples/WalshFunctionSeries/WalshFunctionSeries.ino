@@ -50,7 +50,7 @@ void loop() {
   n=1;
   for (k = 1; k < N; k++)
   {
-    if (k & 1) //even wal's = SAL
+    if (k & 1) //odd WAL = SAL
     {
       for (t = 0; t < N; t++)
       {
@@ -75,7 +75,7 @@ void loop() {
   n=1;
   for (k = 1; k < N; k++)
   {
-    if (!(k & 1)) //uneven wal's = CAL
+    if (!(k & 1)) //even WAL = CAL
     {
       for (t = 0; t < N; t++)
       {
