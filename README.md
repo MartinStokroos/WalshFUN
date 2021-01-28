@@ -1,7 +1,7 @@
 # WalshFUN 
 
-## Walsh functions generator library for Arduino
-The Walsh functions [1] are the discrete version of the sine-cosine functions. Walsh functions can be used analogus to sine-cosine functions in Fourier analysis or wave synthesis. According to the Walsh function definition, the output of the Walsh functions have only two states viz +1 or -1. With this implementation of the Walsh functions  for Arduino, the walsh function output has a logic value of 1 or 0 (boolean).
+## Walsh functions library for Arduino
+The Walsh functions [1] are the discrete version of the sine-cosine functions. Walsh functions can be used analogus to sine-cosine functions in Fourier analysis or wave synthesis. According to the Walsh function definition, the output of the Walsh functions have only two states viz +1 or -1. With this implementation of the Walsh functions  for Arduino, the walsh function output is a logic value of 1 or 0 (boolean).
 
 The Walsh function is noted as:
 
