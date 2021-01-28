@@ -46,7 +46,6 @@ bool walshFun::wal8(unsigned char _n, unsigned char _t) {
         return true;
   }
   else {
-
     i = pgm_read_word(gray_lut8 + n);
     return !parityTable256[i & t]; //XOR (determine even/uneven parity)
   }
@@ -63,7 +62,6 @@ bool walshFun::wal16(unsigned char _n, unsigned char _t) {
         return true;
   }
   else {
-
     i = pgm_read_word(gray_lut16 + n);
     return !parityTable256[i & t]; //XOR (determine even/uneven parity)
   }
@@ -80,7 +78,6 @@ bool walshFun::wal32(unsigned char _n, unsigned char _t) {
         return true;
   }
   else {
-
     i = pgm_read_word(gray_lut32 + n);
     return !parityTable256[i & t]; //XOR (determine even/uneven parity)
   }
@@ -97,7 +94,6 @@ bool walshFun::wal64(unsigned char _n, unsigned char _t) {
         return true;
   }
   else {
-
     i = pgm_read_word(gray_lut64 + n);
     return !parityTable256[i & t]; //XOR (determine even/uneven parity)
   }
@@ -114,7 +110,6 @@ bool walshFun::wal128(unsigned char _n, unsigned char _t) {
         return true;
   }
   else {
-
     i = pgm_read_word(gray_lut128 + n);
     return !parityTable256[i & t]; //XOR (determine even/uneven parity)
   }
@@ -131,7 +126,6 @@ bool walshFun::wal256(unsigned char _n, unsigned char _t) {
         return true;
   }
   else {
-
     i = pgm_read_word(gray_lut256 + n);
     return !parityTable256[i & t]; //XOR (determine even/uneven parity)
   }

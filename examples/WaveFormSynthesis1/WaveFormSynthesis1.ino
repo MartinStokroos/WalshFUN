@@ -53,10 +53,10 @@ void loop() {
 }
 
 /*
- * The output wave could be normalized to 128 by changing the weight factors and send to a PWM output with analogWrite().
+ * The output wave could be normalized to 128 by changing the weight factors for sending the output to analog out with analogWrite().
  * 
- * The wave components (wal 1, 5, 9 and 13) can also be directed, each individually, to digital output ports with digitalWrite().
- * Then the individual digital outputs must be added up with an external analog OPAMP summing amplifier. The weight factors 
+ * The wave components (wal 1, 5, 9 and 13) can also be directed (each individually) to the digital output ports with digitalWrite().
+ * Then, each of the individual digital outputs must be added up with an external analog OPAMP summing amplifier. The weight factors 
  * of the wave components must be 'programmed' in the resistor values.
  * 
  */

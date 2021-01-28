@@ -7,7 +7,7 @@
 *
 * Version history:
 * rev. 1.0.1 - fixed some lookup tables.
-* rev. 1.0.2 - tables data type changed to unsigned char to prevent narrowing conversion problems.
+* rev. 1.0.2 - tables data type changed to unsigned char to prevent 'narrowing conversion' problems.
 *
 *
 * URL: https://github.com/MartinStokroos/WalshFUN
@@ -103,7 +103,6 @@ const unsigned char gray_lut32[] PROGMEM = {
   B00001
 };
 
-
 const unsigned char gray_lut64[] PROGMEM = {
   B000000,
   B100000,
@@ -170,7 +169,6 @@ const unsigned char gray_lut64[] PROGMEM = {
   B100001,
   B000001
 };
-
 
 const unsigned char gray_lut128[] PROGMEM = {
   B0000000,
@@ -302,7 +300,6 @@ const unsigned char gray_lut128[] PROGMEM = {
   B1000001,
   B0000001
 };
-
 
 const unsigned char gray_lut256[] PROGMEM = {
   B00000000,
@@ -573,7 +570,6 @@ const bool parityTable256[256] = {
   #define P6(n) P4(n), P4(n^1), P4(n^1), P4(n)
   P6(0), P6(1), P6(1), P6(0)
 };
-
 
 
 

@@ -19,7 +19,7 @@
 
 int analogPin = 3;
 int k, t = 0;
-float output = 0.0;
+int output = 0;
 unsigned long nextLoop;
 
 const unsigned int w1=64, w2=32, w3=16, w4=8; // weight factors for sinusoidal output wave.
@@ -55,8 +55,8 @@ void loop() {
 }
 
 /*
- * The wave components (wal 1, 3, 7 and 9) can also be directed individually to digital output ports with digitalWrite().
- * Then the individual digital outputs must be added up with an external analog OPAMP summing amplifier. The weight factors 
+ * The wave components (wal 1, 5, 9 and 13) can also be directed (each individually) to the digital output ports with digitalWrite().
+ * Then, each of the individual digital outputs must be added up with an external analog OPAMP summing amplifier. The weight factors 
  * of the wave components must be 'programmed' in the resistor values.
  * 
  */
