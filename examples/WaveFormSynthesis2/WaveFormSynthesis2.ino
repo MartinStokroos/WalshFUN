@@ -6,7 +6,7 @@
 * Last edit: 02-02-2021
 *
 * Version history:
-* v1.0.1 : signed weigth factors.
+* v1.0.1 : signed weigthing factors.
 *
 * URL: https://github.com/MartinStokroos/WalshFUN
 * 
@@ -23,7 +23,7 @@ int k, t = 0;
 int output = 0;
 unsigned long nextLoop;
 
-const unsigned int w1=-64, w2=-32, w3=-16, w4=-8; // weight factors for sawtooth wave.
+const unsigned int w1=-64, w2=-32, w3=-16, w4=-8; // weighting factors for sawtooth wave.
 
 walshFun func;
 

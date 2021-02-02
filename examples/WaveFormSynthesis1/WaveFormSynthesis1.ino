@@ -6,7 +6,7 @@
 * Last edit: 02-02-2021
 *
 * Version history:
-* v1.0.1 : signed weigth factors.
+* v1.0.1 : signed weigthing factors.
 *
 * URL: https://github.com/MartinStokroos/WalshFUN
 * 
@@ -22,7 +22,7 @@ int k, t = 0;
 float output = 0.0;
 unsigned long nextLoop;
 
-const float w1=0.6407, w2=-0.2654, w3=-0.0528, w4=-0.1275; // weight factors for sinusoidal output wave.
+const float w1=0.6407, w2=-0.2654, w3=-0.0528, w4=-0.1275; // weighting factors for sinusoidal output wave.
 
 walshFun func;
 
