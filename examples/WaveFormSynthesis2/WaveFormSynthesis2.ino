@@ -1,11 +1,12 @@
 /*
 * File: WaveformSynthesis2.ino
-* Purpose: Walsh saw-tooth wave synthesis example for Arduino
-* Version: 1.0.0
+* Purpose: Walsh sawtooth wave synthesis example for Arduino
+* Version: 1.0.1
 * Release date: 28-01-2021
+* Last edit: 02-02-2021
 *
 * Version history:
-*
+* v1.0.1 : signed weigth factors.
 *
 * URL: https://github.com/MartinStokroos/WalshFUN
 * 
@@ -22,7 +23,7 @@ int k, t = 0;
 int output = 0;
 unsigned long nextLoop;
 
-const unsigned int w1=64, w2=32, w3=16, w4=8; // weight factors for sinusoidal output wave.
+const unsigned int w1=-64, w2=-32, w3=-16, w4=-8; // weight factors for sawtooth wave.
 
 walshFun func;
 
@@ -40,10 +41,10 @@ void loop() {
   Serial.println(output); // print previous output.
   
   output = 0;
-  func.wal16(1, t) ? output -= w1 : output += w1;
-  func.wal16(3, t) ? output -= w2 : output += w2;
-  func.wal16(7, t) ? output -= w3 : output += w3;
-  func.wal16(15, t) ? output -= w4 : output += w4;
+  func.wal16(1, t) ? output += w1 : output -= w1;
+  func.wal16(3, t) ? output += w2 : output -= w2;
+  func.wal16(7, t) ? output += w3 : output -= w3;
+  func.wal16(15, t) ? output += w4 : output -= w4;
   
   t++;
   if(t == 16) {t = 0;}
