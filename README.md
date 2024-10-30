@@ -11,7 +11,7 @@ In the context of Arduino applications, the implementation of Walsh functions ca
 
 --- 
 
-This revision provides a more comprehensive overview of Walsh functions, their properties, and their applications, especially in the context of digital systems like Arduino.
+This library and examples provides a simple introduction to start experimenting with Walsh functions, especially in the context of digital systems like Arduino.
 
 The Walsh function is noted down as:
 
