@@ -1,11 +1,14 @@
 /*
 * File: walshFun.cpp
 * Purpose: Walsh functions for Arduino
-* Version: 1.0.0
+* Version: 1.0.3
 * Release date: 28-01-2021
-* Last edit:
+* Last edit: 30-10-2024
 *
 * Version history:
+* rev. 1.0.1 - fixed some lookup tables.
+* rev. 1.0.2 - tables data type changed to unsigned char to prevent 'narrowing conversion' problems.
+* rev. 1.0.3 - one lookup table for all Walsh functions of different size.
 *
 *
 * URL: https://github.com/MartinStokroos/WalshFUN
@@ -46,7 +49,7 @@ bool walshFun::wal8(unsigned char _n, unsigned char _t) {
         return true;
   }
   else {
-    i = pgm_read_word(gray_lut8 + n);
+    i = pgm_read_word(gray_lut256 + n) >> 5;
     return !parityTable256[i & t]; //XOR (determine even/uneven parity)
   }
 }
@@ -62,7 +65,7 @@ bool walshFun::wal16(unsigned char _n, unsigned char _t) {
         return true;
   }
   else {
-    i = pgm_read_word(gray_lut16 + n);
+    i = pgm_read_word(gray_lut256 + n) >> 4;
     return !parityTable256[i & t]; //XOR (determine even/uneven parity)
   }
 }
@@ -78,7 +81,7 @@ bool walshFun::wal32(unsigned char _n, unsigned char _t) {
         return true;
   }
   else {
-    i = pgm_read_word(gray_lut32 + n);
+    i = pgm_read_word(gray_lut256 + n) >> 3;
     return !parityTable256[i & t]; //XOR (determine even/uneven parity)
   }
 }
@@ -94,7 +97,7 @@ bool walshFun::wal64(unsigned char _n, unsigned char _t) {
         return true;
   }
   else {
-    i = pgm_read_word(gray_lut64 + n);
+    i = pgm_read_word(gray_lut256 + n) >> 2;
     return !parityTable256[i & t]; //XOR (determine even/uneven parity)
   }
 }
@@ -110,7 +113,7 @@ bool walshFun::wal128(unsigned char _n, unsigned char _t) {
         return true;
   }
   else {
-    i = pgm_read_word(gray_lut128 + n);
+    i = pgm_read_word(gray_lut256 + n) >> 1;
     return !parityTable256[i & t]; //XOR (determine even/uneven parity)
   }
 }
@@ -130,6 +133,5 @@ bool walshFun::wal256(unsigned char _n, unsigned char _t) {
     return !parityTable256[i & t]; //XOR (determine even/uneven parity)
   }
 }
-
 
 // end of walshFun.cpp
