@@ -1,11 +1,21 @@
 # WalshFUN 
 
 ## Walsh functions library for Arduino
-The Walsh functions [1] are the discrete version of the sine-cosine functions. Walsh functions can be used analogus to sine-cosine functions in Fourier analysis or wave synthesis. According to the Walsh function definition, the output of the Walsh functions have only two states viz +1 or -1. With this implementation of the Walsh functions  for Arduino, the walsh function output is a logic value of 1 or 0 (boolean).
+Walsh functions [1] are a set of orthogonal functions that serve as discrete analogs to traditional sine and cosine functions used in Fourier analysis. They are defined on a finite interval and can be particularly useful in various applications, including signal processing, data compression, and error correction.
 
-The Walsh function is noted as:
+Unlike sine and cosine functions, which produce a continuous range of values, Walsh functions take on only two discrete states: +1 and -1. This binary output makes them suitable for digital applications and allows them to represent signals in a simple, yet effective manner.
 
-*WAL(n, t)* , Where:
+The Walsh functions are organized in a hierarchical structure, often represented in a matrix format known as the Walsh matrix. Each row of this matrix corresponds to a different Walsh function, allowing for straightforward computation and transformation of signals. The orthogonality property of these functions ensures that they can be used to decompose a signal into its constituent parts without interference from other components.
+
+In the context of Arduino applications, the implementation of Walsh functions can yield output in the form of boolean values—specifically, logic states of 1 or 0. This allows for straightforward integration into digital circuits and algorithms, where binary logic is essential. By leveraging Walsh functions, developers can create efficient solutions for tasks such as waveform generation, modulation, and pattern recognition, harnessing the power of orthogonal functions in a discrete, binary framework.
+
+--- 
+
+This revision provides a more comprehensive overview of Walsh functions, their properties, and their applications, especially in the context of digital systems like Arduino.
+
+The Walsh function is noted down as:
+
+*WAL(n, t)* ,where:
 
 *n* is the 'frequency' or wave number,
 
@@ -23,10 +33,10 @@ The even Walsh functions are sometimes labeled as *CAL* and the odd Walsh functi
 
 ## Examples
 1. `WalshFunctionSeries.ino` - This example prints the first 32 Walsh functions in 32 timesteps. The logic '1' is printed as '*+*' and the  logic '0' as '*-*'. See below.
-2. `WaveFormSynthesis1` - This example generates a sinewave  from Walsh functions.
+2. `WaveFormSynthesis1` - This example generates a sinewave from Walsh functions.
 3. `WaveFormSynthesis2` - This example generates a sawtooth wave from Walsh functions.
 
-Tip: use the Arduino plotter function for example 2 and 3.
+Use the Arduino plotter function with example 2 and 3.
 
 
 ```
@@ -97,4 +107,5 @@ Tip: use the Arduino plotter function for example 2 and 3.
 +-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+ CAL(15,T)
 
 ```
+
 [1]: https://en.wikipedia.org/wiki/Walsh_function
